@@ -44,8 +44,9 @@ export default class AddServiceProviderPage {
     await page.fill(this.city, user.getCity());
     await page.fill(this.zipCode, user.getZipCode());
     await page.fill(this.landingPage, user.getLandingPage());
-    await page.waitForLoadState('networkidle');
-    await page.locator("button[type='submit']").click();
+    await page.waitForLoadState('domcontentloaded');
+    const okButton = page.locator("button[type='submit']");
+    await okButton.click({force: true});
   }
 
   async signupUsingAPI(
