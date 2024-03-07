@@ -40,7 +40,7 @@ export default class AddServiceProviderPage {
     console.log(this.companyName, user.getCompany());
     await page.fill(this.address1, user.getAddress1());
     await page.locator("id=location.stateProvince-select").click();
-    await page.getByRole("option", { name: "Ohio" }).click();
+    await page.getByRole("option", { name: user.getState() }).click();
     await page.fill(this.city, user.getCity());
     await page.fill(this.zipCode, user.getZipCode());
     await page.fill(this.landingPage, user.getLandingPage());

@@ -18,7 +18,7 @@ export default class User {
 		this.firstName = faker.person.firstName();
 		this.lastName = faker.person.lastName();
 		this.email = faker.internet.email();
-		this.password = '2008Fxdl!';
+		this.password = '**Br3akm3';
 		this.company = faker.company.catchPhrase();
 		console.log(this.company);
 		this.address1 = faker.location.streetAddress();
