@@ -15,8 +15,8 @@ test("should be able to add a new service provider", async ({ page }) => {
 
   const addServiceProvider = new AddServiceProviderPage();
   await addServiceProvider.addServiceProvider(page, user);
-  await adminPage.verifyNewServiceProvider(page, user);
-  await page.pause();
-  ///
+  const rowData = await adminPage.verifyServiceProviderAddress(page, user);
+  console.log(rowData);
   
+
 });

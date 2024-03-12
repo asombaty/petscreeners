@@ -18,7 +18,7 @@ export default class SignInPage {
 
   async logIn(page: Page) {
     await page.fill(this.userName, "qaauto001@petscreening.com");
-    await page.fill(this.passWord, "**Br3akm3");
+    await page.fill(this.passWord, "*Br3akm3*");
     await page.click(this.signInButton);
   }
 }

@@ -20,11 +20,10 @@ export default class User {
 		this.email = faker.internet.email();
 		this.password = '**Br3akm3';
 		this.company = faker.company.catchPhrase();
-		console.log(this.company);
 		this.address1 = faker.location.streetAddress();
 		this.city = faker.location.city();
 		this.state = faker.location.state();
-		this.postalCode = faker.location.zipCode();
+		this.postalCode = faker.location.zipCode('#####');
 		this.landingPage = faker.internet.domainName();
 	}
 

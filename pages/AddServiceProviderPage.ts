@@ -37,7 +37,6 @@ export default class AddServiceProviderPage {
 
   async addServiceProvider(page: Page, user: User) {
     await page.fill(this.companyName, user.getCompany());
-    console.log(this.companyName, user.getCompany());
     await page.fill(this.address1, user.getAddress1());
     await page.locator("id=location.stateProvince-select").click();
     await page.getByRole("option", { name: user.getState() }).click();
@@ -46,7 +45,7 @@ export default class AddServiceProviderPage {
     await page.fill(this.landingPage, user.getLandingPage());
     await page.waitForLoadState('domcontentloaded');
     const okButton = page.locator("button[type='submit']");
-    await okButton.click({force: true});
+    await okButton.click();
   }
 
   async signupUsingAPI(
