@@ -21,7 +21,7 @@ export default defineConfig({
 	workers: process.env.CI ? 1 : undefined,
 	/* Reporter to use. See https://playwright.dev/docs/test-reporters */
 	//reporter: 'allure-playwright',
-	reporter: 'html',
+	reporter: 'allure-playwright',
 	/* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
 	use: {
 		baseURL: 'https://sp.qa.petscreening.com/',
