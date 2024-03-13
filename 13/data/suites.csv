@@ -1,0 +1,2 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Wed Mar 13 23:49:14 GMT 2024","Wed Mar 13 23:49:18 GMT 2024","4065","chromium","addServiceProvider.spec.ts","","","","should be able to add a new service provider",""
