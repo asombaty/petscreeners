@@ -17,4 +17,5 @@ test("should be able to add a new service provider", async ({ page }) => {
   await addServiceProvider.addServiceProvider(page, user);
   const rowData = await adminPage.verifyServiceProviderAddress(page, user);
   console.log(rowData);
+  // Testing for git
 });
