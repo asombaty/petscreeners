@@ -9,7 +9,7 @@ test("should be able to add a new service provider", async ({ page }) => {
   const logInPage = new SignInPage();
   await logInPage.load(page);
   await logInPage.logIn(page);
-  
+
   const adminPage = new AdminDashboard();
   await adminPage.addServiceProvider(page);
 
@@ -17,8 +17,4 @@ test("should be able to add a new service provider", async ({ page }) => {
   await addServiceProvider.addServiceProvider(page, user);
   const rowData = await adminPage.verifyServiceProviderAddress(page, user);
   console.log(rowData);
-  
-
-
-  
 });
