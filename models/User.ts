@@ -5,8 +5,8 @@ export default class User {
 	private lastName: string;
 	private email: string;
 	private password: string;
-	private accessToken: string;
-	private userID: string;
+	private accessToken!: string;
+	private userID!: string;
 	private company: string;
 	private address1: string;
 	private city: string;

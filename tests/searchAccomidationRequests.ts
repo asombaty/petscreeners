@@ -3,21 +3,18 @@ import User from "../models/User";
 import SignInPage from "../pages/SignInPage";
 import AdminDashboard from "../pages/AdminDashboardPage";
 import AddServiceProviderPage from "../pages/AddServiceProviderPage";
+import AccomidationRequestsPage from "../pages/AccomidationRequestsPage";
 
 
 
-test("should be able to add a new service provider", {tag: '@SP'}, async ({ page }) => {
+test("should be able to add a new service provider", {tag: '@AA'}, async ({ page }) => {
   const user = new User();
   const logInPage = new SignInPage();
   await logInPage.load(page);
   await logInPage.logIn(page);
 
-  const adminPage = new AdminDashboard();
+  const adminPage = new AccomidationRequestsPage();
   await adminPage.addServiceProvider(page);
 
-  const addServiceProvider = new AddServiceProviderPage();
-  await addServiceProvider.addServiceProvider(page, user);
-  const rowData = await adminPage.verifyServiceProviderAddress(page, user);
-  console.log(rowData);
-  // Testing for git
+
 });

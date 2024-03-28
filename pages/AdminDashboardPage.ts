@@ -14,17 +14,6 @@ export default class AdminDashboard {
     await page.click(this.addServiceProviderButton);
   }
 
-  //   async verifyNewServiceProvider(page: Page, user: User) {
-  //     const valueToMatch = user.getCompany();
-  //     const row = page.getByRole("row", { name: valueToMatch });
-  //     const addressString = await row.textContent();
-  //     console.log(addressString);
-
-  //     //const parseAddress: string = addressString ? addressString.match(/^(\w+)\s(\w+)\s(\w+)\s(\d{5})\s(.+)([A-Z]{2})(\d{5})$/)?.[0] ?? '' : '';
-  //     const parseAddress: string = addressString ? addressString.match(/^(\w+)\s+(\d+)\s+(\w+)\s+(\w+)\s+(\W{2})(\d{5})$/)?.[0] ?? '' : '';
-  //     console.log(parseAddress);
-
-  // }
   async verifyServiceProviderAddress(page: Page, user: User) {
     const valueToMatch = user.getCompany();
     const row = page.getByRole("row", { name: valueToMatch });

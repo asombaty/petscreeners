@@ -1,4 +1,8 @@
-import { Page } from "@playwright/test";
+import { base } from "@faker-js/faker";
+import { Page, defineConfig } from "@playwright/test";
+import { PlaywrightTestConfig } from "@playwright/test";
+import { config } from "process";
+import playwrightConfig from "../playwright.config";
 
 export default class SignInPage {
   private get userName() {
